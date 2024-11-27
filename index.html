@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Programming Documentation Generator</title>
+    <!-- Import Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Import Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <!-- Add SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- Add SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Add Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta name="description" content="AI Programming Documentation Generator - Generate programming documentation using AI.">
+    <meta name="keywords" content="AI, programming, documentation, generator, OpenAI, GPT-4">
+    <meta name="author" content="codefreelance.net">
+</head>
+
+<body>
+    <nav class="fixed-nav">
+        <a href="#inputForm">Input Form</a>
+        <a href="#ai-prompts">AI Prompts</a>
+        <a href="#promptManagement">Manage Prompts</a>
+        <a href="#promptSelection">Select Prompts</a>
+        <button type="button" id="generatePrompts" class="btn btn-primary ml-3">Generate</button>
+        <button id="themeToggle" class="btn btn-secondary ml-3">Toggle Dark Mode</button>
+        <button type="button" id="downloadAllBtn" class="btn btn-success ml-3">Download All</button>
+        <button type="button" id="copyAllBtn" class="btn btn-info ml-3">Copy All</button>
+    </nav>
+
+    <div id="fullScreenLoader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div class="container main-content">
+        <h1 class="page-title">AI Programming Documentation Generator</h1>
+        <div class="disclaimer">
+            **Note:** This AI system generates responses based on patterns identified in its training data. While it
+            strives for accuracy, the generated code may not be perfect and should be thoroughly tested before use in
+            production.
+        </div>
+
+        <form id="inputForm">
+            <div class="form-group">
+                <label for="languageInput">Programming Language</label>
+                <input type="text" id="languageInput" class="form-control" placeholder="Enter programming language"
+                    required>
+            </div>
+            <div class="form-group"></div>
+            <label for="apiKeyInput">OpenAI API Key</label>
+            <input type="password" id="apiKeyInput" class="form-control" placeholder="Enter OpenAI API key" required>
+    </div>
+    <div class="form-group">
+        <label for="modelSelect">Select Model</label>
+        <select id="modelSelect" class="form-control">
+            <option value="gpt-4o-mini">gpt-4o-mini</option>
+            <option value="gpt-4o">gpt-4o</option>
+            <option value="custom">Custom</option>
+        </select>
+        <input type="text" id="customModelInput" class="form-control mt-2" placeholder="Enter custom model"
+            style="display: none;">
+    </div>
+    <div class="button-group">
+        <button type="button" class="btn btn-danger" id="clearBtn">Clear Form</button>
+    </div>
+    </form>
+    <div class="api-key-info alert alert-info mt-3">
+        <p class="mb-0">To use this application, you'll need an OpenAI API key. You can obtain one by visiting: 
+            <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a>
+        </p>
+    </div>
+
+    <div id="loadingIndicator" class="loading-spinner" style="display: none;"></div>
+
+    <nav id="navigationMenu" class="mt-4">
+    </nav>
+
+    <section id="ai-prompts" class="mt-4">
+    </section>
+
+    <section id="promptManagement" class="mt-5">
+        <h2>Manage AI Prompts</h2>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Add Category</h5>
+                <form id="addCategoryForm">
+                    <div class="form-group">
+                        <label for="newCategoryName">Category Name</label>
+                        <input type="text" id="newCategoryName" class="form-control"
+                            placeholder="Enter new category name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Category</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Add Prompt</h5>
+                <form id="addPromptForm">
+                    <div class="form-group">
+                        <label for="selectCategory">Select Category</label>
+                        <select id="selectCategory" class="form-control" required>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPrompt">Prompt</label>
+                        <input type="text" id="newPrompt" class="form-control" placeholder="Enter new prompt" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Prompt</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="existingPrompts">
+        </div>
+    </section>
+
+    <section id="promptSelection" class="mt-5">
+        <h2>Select Prompts to Generate</h2>
+        <div class="mb-3">
+            <button id="selectAllBtn" class="btn btn-secondary btn-sm">Select All</button>
+            <button id="deselectAllBtn" class="btn btn-secondary btn-sm">Deselect All</button>
+        </div>
+        <div id="selectionPrompts">
+        </div>
+    </section>
+    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2023 codefreelance.net All rights reserved.</p>
+        <a href="https://www.paypal.com/donate/?business=CMX68UBF9FEWA&no_recurring=0&item_name=Keep+this+site+running+ad-free%21+Any+amount+helps+cover+costs+and+is+greatly+appreciated.+Thank+you+for+your+support%21&currency_code=USD" class="donate-link">Donate</a>
+    </footer>
+    <script src="js/index.js"></script>
+    <script>
+        document.getElementById('modelSelect').addEventListener('change', function () {
+            const customInput = document.getElementById('customModelInput');
+            if (this.value === 'custom') {
+                customInput.style.display = 'block';
+            } else {
+                customInput.style.display = 'none';
+            }
+        });
+
+        document.getElementById('copyAllBtn').addEventListener('click', function () {
+            const prompts = document.querySelectorAll('#ai-prompts pre');
+            let allText = '';
+            prompts.forEach(prompt => {
+                allText += prompt.textContent + '\n\n';
+            });
+            navigator.clipboard.writeText(allText).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        });
+    </script>
+</body>
+
+</html>

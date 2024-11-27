@@ -269,8 +269,8 @@ body.dark-mode select.form-control option {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: var(--bg-color);
     text-align: center;
+    background-color: var(--bg-color);
     padding: 0.5rem;
     border-top: 1px solid var(--border-color);
     display: flex;

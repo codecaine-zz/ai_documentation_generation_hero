@@ -38,3 +38,14 @@ The top navigation bar allows you to move around the application quickly. It inc
 ## Document Examples
 
 Look in the `document_examples` folder to see examples for Python, Bun JavaScript, and Node.js JavaScript. Additional examples may be added in the future.
+
+## Application Screenshots
+
+Here are some screenshots of the application:
+
+![app](screenshots/app1.png)
+![app](screenshots/app2.png)
+![app](screenshots/app3.png)
+
+## Github markdown filter screenshot
+![app](screenshots/github_markdown.png)

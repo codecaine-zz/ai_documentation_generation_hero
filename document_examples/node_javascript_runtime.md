@@ -1,18 +1,3 @@
-# Node.js JavaScript Runtime
-
-## Table of Contents
-
-- [Control Structures](#control-structures)
-- [Data Types and Variables](#data-types-and-variables)
-- [Regular Expressions (Regex)](#regular-expressions-regex)
-- [Security](#security)
-- [Error Handling](#error-handling)
-- [File Input/Output](#file-inputoutput)
-- [Functions and Methods](#functions-and-methods)
-- [Networking and Web Development](#networking-and-web-development)
-- [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
-- [Testing and Debugging](#testing-and-debugging)
-
 Control Structures
 In Node.js, JavaScript doesn't have built-in support for "edit statements", because JavaScript itself doesn't have syntax specifically for modifying already declared code. However, you can dynamically edit code during runtime using several techniques. Here are some common approaches:
 

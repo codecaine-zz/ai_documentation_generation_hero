@@ -1,26 +1,3 @@
-# Python Basics
-
-## Table of Contents
-- [Python Basics](#python-basics)
-  - [Variables and Data Types](#variables-and-data-types)
-  - [Control Structures](#control-structures)
-    - [Editing Lists](#editing-lists)
-    - [Editing Dictionaries](#editing-dictionaries)
-    - [Editing Strings](#editing-strings)
-  - [Loops](#loops)
-    - [For Loops](#for-loops)
-    - [While Loops](#while-loops)
-  - [Data Types and Variables](#data-types-and-variables)
-  - [Enumerated Types](#enumerated-types)
-  - [Arrays](#arrays)
-  - [Lists](#lists)
-  - [Dictionaries](#dictionaries)
-  - [Sets](#sets)
-  - [Tuples](#tuples)
-  - [Databases](#databases)
-  - [Resources](#resources)
-
-
 Control Structures
 In Python, the concept of "edit statements" doesn't directly exist as a specific feature or syntax. However, Python provides various ways to edit or manipulate data, such as modifying elements in lists, updating dictionaries, or changing the contents of strings (indirectly, since strings are immutable).
 

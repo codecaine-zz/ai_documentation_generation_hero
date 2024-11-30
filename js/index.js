@@ -675,6 +675,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.getElementById('downloadAllBtn').addEventListener('click', () => {
+        const language = document.getElementById('languageInput').value.trim();
         const aiPromptsSection = document.getElementById('ai-prompts');
         let content = '';
 
@@ -694,7 +695,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'documentation.md';
+        a.download = `${language}_documentation.md`;
         a.click();
         URL.revokeObjectURL(url);
     });

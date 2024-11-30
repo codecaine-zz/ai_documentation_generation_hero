@@ -6,93 +6,149 @@ function getAIPrompts() {
     } else {
         const defaultPrompts = {
             "Data Types and Variables": [
-                "Write examples of declaring and using variables in [language name].",
-                "Explain how to work with integers, floats, and strings in [language name].",
-                "Show code examples of using enumerated types in [language name].",
-                "Write examples of defining and using arrays in [language name].",
-                "Provide code examples of using lists in [language name].",
-                "Explain how to work with dictionaries in [language name].",
-                "Write examples of using sets in [language name].",
-                "Show code examples of working with tuples in [language name]."
+                "Provide multiple examples of declaring and using variables in [language name].",
+                "Explain and demonstrate how to work with integers, floats, and strings in [language name] with code examples.",
+                "Show detailed code examples of using enumerated types in [language name].",
+                "Write comprehensive examples of defining and using arrays in [language name].",
+                "Provide detailed code examples of using lists in [language name].",
+                "Explain and demonstrate how to work with dictionaries in [language name] with code examples.",
+                "Write detailed examples of using sets in [language name].",
+                "Show comprehensive code examples of working with tuples in [language name]."
             ],
             "Control Structures": [
-                "Write examples of using if-else statements in [language name].",
-                "Explain how to use switch statements in [language name].",
-                "Provide code examples of using for loops in [language name].",
-                "Show examples of using while loops in [language name].",
-                "Write examples of using do-while loops in [language name].",
-                "Explain how to use break and continue statements in [language name].",
-                "Show code examples of using labels and gotos in [language name]."
+                "Provide multiple examples of using if-else statements in [language name] with detailed code.",
+                "Explain and demonstrate how to use switch statements in [language name] with code examples.",
+                "Provide detailed code examples of using for loops in [language name].",
+                "Show comprehensive examples of using while loops in [language name] with code.",
+                "Write detailed examples of using do-while loops in [language name].",
+                "Explain and demonstrate how to use break and continue statements in [language name] with code examples.",
+                "Show detailed code examples of using labels and gotos in [language name]."
             ],
             "Functions and Methods": [
-                "Write examples of defining and calling functions in [language name].",
-                "Explain how to work with function arguments in [language name].",
-                "Provide code examples of using default and optional function arguments in [language name].",
-                "Show examples of using return values in [language name].",
-                "Write examples of using lambda functions in [language name]."
+                "Provide multiple examples of defining and calling functions in [language name] with detailed code.",
+                "Explain and demonstrate how to work with function arguments in [language name] with code examples.",
+                "Provide detailed code examples of using default and optional function arguments in [language name].",
+                "Show comprehensive examples of using return values in [language name] with code.",
+                "Write detailed examples of using lambda functions in [language name]."
             ],
             "Object-Oriented Programming (OOP)": [
-                "Explain how to define and use classes in [language name].",
-                "Show code examples of creating objects and instancing classes in [language name].",
-                "Write examples of using inheritance in [language name].",
-                "Explain how to use polymorphism in [language name].",
-                "Provide code examples of defining and using interfaces in [language name]."
+                "Explain and demonstrate how to define and use classes in [language name] with detailed code examples.",
+                "Show comprehensive code examples of creating objects and instancing classes in [language name].",
+                "Write detailed examples of using inheritance in [language name].",
+                "Explain and demonstrate how to use polymorphism in [language name] with code examples.",
+                "Provide detailed code examples of defining and using interfaces in [language name]."
             ],
             "Regular Expressions (Regex)": [
-                "Write examples of using regex patterns in [language name].",
-                "Explain how to work with capturing groups in [language name].",
-                "Provide code examples of using regex substitutions in [language name].",
-                "Show examples of using regex validation in [language name].",
-                "Write examples of using regex callbacks in [language name]."
+                "Provide multiple examples of using regex patterns in [language name] with detailed code.",
+                "Explain and demonstrate how to work with capturing groups in [language name] with code examples.",
+                "Provide detailed code examples of using regex substitutions in [language name].",
+                "Show comprehensive examples of using regex validation in [language name] with code.",
+                "Write detailed examples of using regex callbacks in [language name]."
             ],
             "File Input/Output": [
-                "Explain how to read and write text files in [language name].",
-                "Show code examples of working with binary files in [language name].",
-                "Write examples of using CSV and JSON file formats in [language name].",
-                "Provide code examples of working with file streams in [language name].",
-                "Explain how to use file I/O with exceptions in [language name]."
+                "Explain and demonstrate how to read and write text files in [language name] with detailed code examples.",
+                "Show comprehensive code examples of working with binary files in [language name].",
+                "Write detailed examples of using CSV and JSON file formats in [language name].",
+                "Provide detailed code examples of working with file streams in [language name].",
+                "Explain and demonstrate how to use file I/O with exceptions in [language name] with code examples."
             ],
             "Error Handling": [
-                "Write examples of using try-catch blocks in [language name].",
-                "Explain how to work with exception types in [language name].",
-                "Provide code examples of using custom error classes in [language name].",
-                "Show examples of using finally blocks in [language name].",
-                "Write examples of using error messages and logs in [language name]."
+                "Provide multiple examples of using try-catch blocks in [language name] with detailed code.",
+                "Explain and demonstrate how to work with exception types in [language name] with code examples.",
+                "Provide detailed code examples of using custom error classes in [language name].",
+                "Show comprehensive examples of using finally blocks in [language name] with code.",
+                "Write detailed examples of using error messages and logs in [language name]."
             ],
             "Networking and Web Development": [
-                "Write examples of using HTTP requests in [language name].",
-                "Explain how to work with websockets in [language name].",
-                "Provide code examples of using FTP/SFTP/SSH in [language name].",
-                "Show examples of using XML/JSON data with web services in [language name].",
-                "Write examples of using web frameworks like Flask/Django in [language name]."
+                "Provide multiple examples of using HTTP requests in [language name] with detailed code.",
+                "Explain and demonstrate how to work with websockets in [language name] with code examples.",
+                "Provide detailed code examples of using FTP/SFTP/SSH in [language name].",
+                "Show comprehensive examples of using XML/JSON data with web services in [language name] with code.",
+                "Write detailed examples of using web frameworks like Flask/Django in [language name]."
             ],
             "Databases": [
-                "Explain how to connect to a database in [language name].",
-                "Show code examples of creating and querying tables in [language name].",
-                "Write examples of using SQL queries with JOINs and subqueries in [language name].",
-                "Provide code examples of using prepared statements in [language name].",
-                "Explain how to use transactions with database operations in [language name]."
+                "Explain and demonstrate how to connect to a database in [language name] with detailed code examples.",
+                "Show comprehensive code examples of creating and querying tables in [language name].",
+                "Write detailed examples of using SQL queries with JOINs and subqueries in [language name].",
+                "Provide detailed code examples of using prepared statements in [language name].",
+                "Explain and demonstrate how to use transactions with database operations in [language name] with code examples."
+            ],
+            "SQLite": [
+                "Explain and demonstrate how to set up and connect to a SQLite database in [language name] with detailed code examples.",
+                "Provide detailed code examples of creating tables in SQLite using [language name].",
+                "Write comprehensive examples of inserting, updating, and deleting records in SQLite with [language name].",
+                "Show detailed code examples of querying SQLite databases using [language name].",
+                "Explain and demonstrate how to handle SQLite database transactions in [language name] with code examples."
+            ],
+            "MySQL": [
+                "Explain and demonstrate how to set up and connect to a MySQL database in [language name] with detailed code examples.",
+                "Provide detailed code examples of creating tables in MySQL using [language name].",
+                "Write comprehensive examples of inserting, updating, and deleting records in MySQL with [language name].",
+                "Show detailed code examples of querying MySQL databases using [language name].",
+                "Explain and demonstrate how to handle MySQL database transactions in [language name] with code examples."
+            ],
+            "PostgreSQL": [
+                "Explain and demonstrate how to set up and connect to a PostgreSQL database in [language name] with detailed code examples.",
+                "Provide detailed code examples of creating tables in PostgreSQL using [language name].",
+                "Write comprehensive examples of inserting, updating, and deleting records in PostgreSQL with [language name].",
+                "Show detailed code examples of querying PostgreSQL databases using [language name].",
+                "Explain and demonstrate how to handle PostgreSQL database transactions in [language name] with code examples."
+            ],
+            "MongoDB": [
+                "Explain and demonstrate how to set up and connect to a MongoDB database in [language name] with detailed code examples.",
+                "Provide detailed code examples of creating collections in MongoDB using [language name].",
+                "Write comprehensive examples of inserting, updating, and deleting documents in MongoDB with [language name].",
+                "Show detailed code examples of querying MongoDB databases using [language name].",
+                "Explain and demonstrate how to handle MongoDB database transactions in [language name] with code examples."
             ],
             "Security": [
-                "Write examples of using encryption and decryption in [language name].",
-                "Explain how to work with digital signatures and certificates in [language name].",
-                "Provide code examples of using secure password storage in [language name].",
-                "Show examples of using secure socket layer (SSL) and transport layer security (TLS) in [language name].",
-                "Write examples of using access control lists (ACLs) in [language name]."
+                "Provide multiple examples of using encryption and decryption in [language name] with detailed code.",
+                "Explain and demonstrate how to work with digital signatures and certificates in [language name] with code examples.",
+                "Provide detailed code examples of using secure password storage in [language name].",
+                "Show comprehensive examples of using secure socket layer (SSL) and transport layer security (TLS) in [language name] with code.",
+                "Write detailed examples of using access control lists (ACLs) in [language name]."
             ],
             "Algorithms and Data Structures": [
-                "Explain how to implement a sorting algorithm in [language name].",
-                "Provide code examples of using a binary search algorithm in [language name].",
-                "Show examples of implementing a linked list data structure in [language name].",
-                "Write examples of using a stack data structure in [language name].",
-                "Explain how to implement a queue data structure in [language name]."
+                "Explain and demonstrate how to implement a sorting algorithm in [language name] with detailed code examples.",
+                "Provide detailed code examples of using a binary search algorithm in [language name].",
+                "Show comprehensive examples of implementing a linked list data structure in [language name] with code.",
+                "Write detailed examples of using a stack data structure in [language name].",
+                "Explain and demonstrate how to implement a queue data structure in [language name] with code examples."
             ],
             "Testing and Debugging": [
-                "Write examples of using unit testing frameworks in [language name].",
-                "Explain how to work with test cases in [language name].",
-                "Provide code examples of using mock objects in [language name].",
-                "Show examples of using debugging tools in [language name].",
-                "Write examples of using logging frameworks in [language name]."
+                "Provide multiple examples of using unit testing frameworks in [language name] with detailed code.",
+                "Explain and demonstrate how to work with test cases in [language name] with code examples.",
+                "Provide detailed code examples of using mock objects in [language name].",
+                "Show comprehensive examples of using debugging tools in [language name] with code.",
+                "Write detailed examples of using logging frameworks in [language name]."
+            ],
+            "SOLID Principles": [
+                "Explain and demonstrate the Single Responsibility Principle with examples in [language name] with detailed code.",
+                "Provide detailed code examples demonstrating the Open/Closed Principle in [language name].",
+                "Write comprehensive examples of the Liskov Substitution Principle in [language name].",
+                "Show detailed code examples of the Interface Segregation Principle in [language name].",
+                "Explain and demonstrate the Dependency Inversion Principle with examples in [language name] with code."
+            ],
+            "MVC Architecture": [
+                "Explain and demonstrate the Model-View-Controller (MVC) architecture in [language name] with detailed code examples.",
+                "Provide detailed code examples of implementing the Model component in [language name].",
+                "Write comprehensive examples of creating the View component in [language name].",
+                "Show detailed code examples of the Controller component in [language name].",
+                "Explain and demonstrate how to connect the Model, View, and Controller in [language name] with code examples."
+            ],
+            "Standard Library": [
+                "Provide multiple examples of using the standard library in [language name] with detailed code.",
+                "Explain and demonstrate how to use common modules in the standard library of [language name] with code examples.",
+                "Provide detailed code examples of using file handling functions from the standard library in [language name].",
+                "Show comprehensive examples of using data structures from the standard library in [language name] with code.",
+                "Write detailed examples of using networking functions from the standard library in [language name]."
+            ],
+            "Package Managers": [
+                "Provide examples of installing packages using [language name] package managers.",
+                "Explain how to manage dependencies in [language name] using its package manager.",
+                "Show detailed code examples of updating and removing packages with [language name] package managers.",
+                "Demonstrate how to configure package repositories in [language name].",
+                "Provide best practices for versioning and locking dependencies in [language name] package managers."
             ]
         };
         localStorage.setItem('aiPrompts', JSON.stringify(defaultPrompts));
@@ -638,7 +694,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'AI_Prompts_Results.txt';
+        a.download = 'documentation.md';
         a.click();
         URL.revokeObjectURL(url);
     });
